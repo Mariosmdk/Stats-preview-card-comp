@@ -1,3 +1,102 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
- 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+/* main background */
+--Very-dark-blue : hsl(233, 47%, 7%);
+/* card background */
+--Dark-desaturated-blue : hsl(244, 38%, 16%);
+/* accent */
+--Soft-violet : hsl(277, 64%, 61%);
+/* main heading - stats */
+--White: hsl(0, 0%, 100%);
+/* main paragraph */
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+/* stat headings */
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+--inter: 'Inter', sans-serif;
+--lexend: 'Lexend Deca', sans-serif;
+ }
+
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ .flex{
+     display: flex;
+ }
+ body{
+     background: var(--Very-dark-blue);
+     color: var(--White);
+     font-size: 15px;
+     
+ }
+ section{
+     width: 60%;
+     margin: 200px auto;
+     background-color: var(--Dark-desaturated-blue);
+     border-radius: 10px;
+ }
+ article{
+     margin: auto 0 auto 40px;
+ }
+ .main-title{
+    font-family: var(--inter);
+    font-size: 2.5em;
+    color: var(--White);
+    margin: 0 80px 0 50px;
+    
+ }
+ .main-disc{
+    font-family: var(--lexend);
+    color: var(--Slightly-transparent-white);
+    font-size: 1em;
+    padding-right: 120px;
+    line-height: 1.8;
+    margin: 30px 50px 60px 50px ;
+ }
+ .accent{
+    color: var(--Soft-violet);
+}
+
+.box{
+    margin: 0 0 0 50px;
+}
+ .box-title{
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 1.8em;
+ }
+ .box-disc{
+    font-family: var(--inter);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--Slightly-transparent-white);
+ }
+ img .overlay{
+     background-color: var(--Soft-violet);
+     background-blend-mode: overlay;
+ }
+@media screen and (max-width: 1920px ) {
+    .mobile-img{
+        display: none;
+    }
+    .desktop-img{
+        display: block;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        color: var(--Soft-violet);
+        background-blend-mode: multiply;
+    }
+}
+@media screen and (max-width: 375px ) {
+    .desktop-img{
+        display: none;
+    }
+    .mobile-img{
+        display: block;
+    }
+    .flex{
+        flex-direction: column-reverse;
+    }
+}
